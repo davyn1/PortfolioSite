@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davy Nguyen — Cybersecurity & Software Engineer</title>
+  <meta name="description" content="Personal portfolio of Davy Nguyen — UC Irvine BIM graduate seeking roles in cybersecurity and software engineering. Projects, certifications, and more." />
+  <meta name="keywords" content="Davy Nguyen, cybersecurity, software engineer, data analytics, UC Irvine, portfolio" />
+  <meta property="og:title" content="Davy Nguyen — Portfolio" />
+  <meta property="og:description" content="Cybersecurity Enthusiast & Software Engineer — Turning data into decisions and code into solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Animated canvas background -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ──────────────────────────────────────────────
+     NAVIGATION
+─────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">&lt;<span>Davy</span> /&gt;</a>
+
+    <ul class="nav-links">
+      <li><a href="#about"    data-num="01">About</a></li>
+      <li><a href="#projects" data-num="02">Projects</a></li>
+      <li><a href="#certs"    data-num="03">Certs</a></li>
+      <li><a href="#github"   data-num="04">GitHub</a></li>
+      <li><a href="#contact"  class="nav-cta">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ──────────────────────────────────────────────
+     HERO
+─────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, world — I'm</p>
+
+      <h1 class="hero-name">
+        Davy<br />
+        <span class="accent">Nguyen</span>
+      </h1>
+
+      <div class="hero-typing-line">
+        <span class="prompt">~$</span>
+        <span id="typed-text"></span><span class="cursor-blink"></span>
+      </div>
+
+      <p class="hero-tagline">
+        "Turning data into decisions and code into solutions."
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary" id="cta-work">
+          <i class="fa-solid fa-folder-open"></i> View My Work
+        </a>
+        <a href="#contact" class="btn-secondary" id="cta-contact">
+          <i class="fa-solid fa-terminal"></i> Contact Me
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-mouse"></div>
+    <span class="scroll-label">Scroll</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ──────────────────────────────────────────────
+     ABOUT
+─────────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <p class="section-label reveal">about_me</p>
+    <h2 class="section-title reveal">Who I Am</h2>
+
+    <div class="about-grid">
+      <!-- Photo -->
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-frame">
+          <!-- Replace src with assets/profile.jpg when available -->
+          <div class="about-photo-placeholder" id="profile-photo">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="about-corner-tag">
+            <i class="fa-solid fa-circle" style="color:var(--neon-green); font-size:0.5rem;"></i>
+            &nbsp;Open to Work
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio & Skills -->
+      <div class="about-text">
+        <p class="about-bio reveal">
+          Recent Business Information Management graduate from <strong style="color:var(--neon-cyan)">UC Irvine</strong>, 
+          seeking roles in cybersecurity or software engineering. Passionate about technology and data analytics, 
+          with hands-on experience in data management, analysis, and software development. Looking to bring my skills 
+          to a driven team while continuing to grow alongside like-minded people in the tech community.
+        </p>
+
+        <div class="skills-grid reveal">
+          <div class="skill-category">
+            <span class="skill-cat-label"><i class="fa-solid fa-code"></i> Languages</span>
+            <div class="skill-pills">
+              <span class="pill">SQL</span>
+              <span class="pill">Python</span>
+              <span class="pill">R</span>
+              <span class="pill">Java</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-cat-label"><i class="fa-solid fa-layer-group"></i> Frameworks & Tools</span>
+            <div class="skill-pills">
+              <span class="pill">React</span>
+              <span class="pill">Angular</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Flask</span>
+              <span class="pill">NumPy</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">MySQL</span>
+              <span class="pill">AWS</span>
+              <span class="pill">Git</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-cat-label"><i class="fa-solid fa-shield-halved"></i> Focus Areas</span>
+            <div class="skill-pills">
+              <span class="pill focus">Cybersecurity</span>
+              <span class="pill focus">Data Analytics</span>
+              <span class="pill focus">Software Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <span class="skill-cat-label"><i class="fa-solid fa-people-group"></i> Soft Skills</span>
+            <div class="skill-pills">
+              <span class="pill soft">Collaboration</span>
+              <span class="pill soft">Communication</span>
+              <span class="pill soft">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ──────────────────────────────────────────────
+     PROJECTS
+─────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label reveal">projects</p>
+    <h2 class="section-title reveal">What I've Built</h2>
+
+    <div class="projects-grid">
+
+      <!-- Fablix -->
+      <article class="project-card reveal" id="project-fablix">
+        <div class="project-header">
+          <div class="project-icon">🎬</div>
+          <div class="project-links">
+            <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="project-link" title="GitHub" aria-label="Fablix GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <span class="project-date">April 2023</span>
+        <h3 class="project-name">Fablix — Web Application</h3>
+        <p class="project-desc">
+          Full-stack web &amp; Android app to browse, search, and buy movies. Built a REST API via Apache Tomcat, 
+          backed by 20,000+ movie DB entries. Features Google reCAPTCHA, persistent cart, and stress-tested 
+          to handle 5,000+ requests per minute.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">AWS EC2</span>
+          <span class="tech-tag">GCP</span>
+          <span class="tech-tag">Apache Tomcat</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">REST API</span>
+        </div>
+      </article>
+
+      <!-- Search Engine -->
+      <article class="project-card reveal" id="project-search-engine">
+        <div class="project-header">
+          <div class="project-icon">🔍</div>
+          <div class="project-links">
+            <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="project-link" title="GitHub" aria-label="Search Engine GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <span class="project-date">April 2022</span>
+        <h3 class="project-name">Search Engine</h3>
+        <p class="project-desc">
+          Web scraper and search engine that indexes 2,000+ pages using Beautiful Soup. Implemented 
+          robust error handling for 300+ infinite loop pages and web request failures, with custom 
+          ranking and retrieval logic.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Beautiful Soup</span>
+        </div>
+      </article>
+
+      <!-- Sleep Tracker -->
+      <article class="project-card reveal" id="project-sleep-tracker">
+        <div class="project-header">
+          <div class="project-icon">😴</div>
+          <div class="project-links">
+            <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="project-link" title="GitHub" aria-label="Sleep Tracker GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <span class="project-date">November 2023</span>
+        <h3 class="project-name">Sleep Tracker — Mobile App</h3>
+        <p class="project-desc">
+          Mobile sleep tracker featuring overnight sleep logging and daytime sleepiness tracking. 
+          Includes native device notifications and follows Android design conventions for a 
+          polished, intuitive experience.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Ionic</span>
+          <span class="tech-tag">Angular</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ──────────────────────────────────────────────
+     CERTIFICATES
+─────────────────────────────────────────────── -->
+<section id="certs">
+  <div class="container">
+    <p class="section-label reveal">certifications</p>
+    <h2 class="section-title reveal">Badges &amp; Certs</h2>
+
+    <div class="certs-grid">
+
+      <!-- AWS Cloud Practitioner -->
+      <div class="cert-card reveal" id="cert-aws">
+        <div class="cert-badge-wrap">☁️</div>
+        <div>
+          <p class="cert-name">AWS Certified Cloud Practitioner</p>
+          <p class="cert-issuer">Amazon Web Services</p>
+        </div>
+        <p class="cert-date"><i class="fa-regular fa-calendar"></i> &nbsp;March 22, 2026</p>
+        <a href="https://www.credly.com/" 
+           target="_blank" rel="noopener" 
+           class="cert-verify" 
+           id="cert-aws-verify"
+           aria-label="Verify AWS certification on Credly">
+          <i class="fa-solid fa-certificate"></i> Verify Badge
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ──────────────────────────────────────────────
+     GITHUB
+─────────────────────────────────────────────── -->
+<section id="github">
+  <div class="container">
+    <p class="section-label reveal">github</p>
+    <h2 class="section-title reveal">GitHub Activity</h2>
+
+    <div class="github-stats-grid reveal">
+      <div class="github-stat-card">
+        <span class="github-stat-label">📊 Stats</span>
+        <img 
+          src="https://github-readme-stats.vercel.app/api?username=davyn1&show_icons=true&theme=transparent&title_color=00F5FF&icon_color=00F5FF&text_color=8BA3B0&border_color=1a2d3a&hide_border=false&count_private=true" 
+          alt="Davy Nguyen's GitHub Stats"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="github-stat-card">
+        <span class="github-stat-label">🏆 Top Languages</span>
+        <img 
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=davyn1&layout=compact&theme=transparent&title_color=00F5FF&text_color=8BA3B0&border_color=1a2d3a&hide_border=false&langs_count=8" 
+          alt="Davy Nguyen's Top Languages"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- Streak -->
+    <div class="reveal" style="text-align:center; margin-bottom: 40px;">
+      <div class="github-stat-card" style="display:inline-block; max-width: 500px; width:100%;">
+        <span class="github-stat-label">🔥 Contribution Streak</span>
+        <img 
+          src="https://streak-stats.demolab.com?user=davyn1&theme=dark&hide_border=false&stroke=1a2d3a&ring=00F5FF&fire=39FF14&currStreakLabel=00F5FF&background=0C1219&sideLabels=8BA3B0&dates=4A6572&border=1a2d3a" 
+          alt="Davy Nguyen's GitHub Streak"
+          loading="lazy"
+          style="width:100%;"
+        />
+      </div>
+    </div>
+
+    <!-- Pinned repos -->
+    <div class="repos-strip reveal">
+      <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="repo-mini-card" id="repo-fablix">
+        <div class="repo-name"><i class="fa-brands fa-github"></i> Fablix</div>
+        <p class="repo-desc">Full-stack movie browsing web &amp; Android application with REST API and 20k+ entries.</p>
+        <div class="repo-meta">
+          <span><i class="fa-brands fa-java"></i> Java</span>
+          <span><i class="fa-regular fa-star"></i> —</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="repo-mini-card" id="repo-search">
+        <div class="repo-name"><i class="fa-brands fa-github"></i> Search Engine</div>
+        <p class="repo-desc">Web crawler &amp; search engine indexing 2,000+ pages with Beautiful Soup.</p>
+        <div class="repo-meta">
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="fa-regular fa-star"></i> —</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="repo-mini-card" id="repo-sleep">
+        <div class="repo-name"><i class="fa-brands fa-github"></i> Sleep Tracker</div>
+        <p class="repo-desc">Ionic + Angular mobile app for overnight sleep and daytime sleepiness logging.</p>
+        <div class="repo-meta">
+          <span><i class="fa-brands fa-angular"></i> Angular</span>
+          <span><i class="fa-regular fa-star"></i> —</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="github-cta reveal">
+      <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="btn-secondary" id="btn-github-profile">
+        <i class="fa-brands fa-github"></i> View Full Profile
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- ──────────────────────────────────────────────
+     CONTACT
+─────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <p class="section-label reveal" style="text-align:center;">contact</p>
+      <h2 class="section-title reveal" style="display:block; text-align:center;">Get In Touch</h2>
+
+      <p class="contact-tagline reveal">
+        Whether you have a role in mind, a project to collaborate on, or just want to say hi — 
+        my inbox is always open.
+      </p>
+
+      <div class="contact-links reveal">
+        <a href="mailto:davyn1300@gmail.com" class="contact-link" id="contact-email">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          davyn1300@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/davy-nguyen1" target="_blank" rel="noopener" class="contact-link" id="contact-linkedin">
+          <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+          LinkedIn
+        </a>
+        <a href="https://github.com/davyn1" target="_blank" rel="noopener" class="contact-link" id="contact-github">
+          <span class="icon"><i class="fa-brands fa-github"></i></span>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────
+     FOOTER
+─────────────────────────────────────────────── -->
+<footer>
+  <div class="container footer-inner">
+    <p class="footer-copy">
+      &copy; 2026 <strong>Davy Nguyen</strong> — Built with ❤️ &amp; <code style="color:var(--neon-cyan)">HTML/CSS/JS</code>
+    </p>
+    <p class="footer-tagline">
+      <span style="color:var(--neon-green)">~$</span> davy.nguyen --version 1.0.0
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
