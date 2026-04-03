@@ -811,10 +811,14 @@ nav.scrolled {
 
 .github-stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 .github-stat-card {
   background: var(--bg-card);
