@@ -9,17 +9,16 @@
 const TYPED_STRINGS = [
   'Cybersecurity Enthusiast',
   'Software Engineer',
-  'Data Analytics',
   'BIM Graduate @ UC Irvine',
 ];
 
-let typedIndex   = 0;
-let charIndex    = 0;
-let isDeleting   = false;
-const typedEl    = document.getElementById('typed-text');
+let typedIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typedEl = document.getElementById('typed-text');
 const TYPE_SPEED = 80;
-const DEL_SPEED  = 40;
-const PAUSE_MS   = 1800;
+const DEL_SPEED = 40;
+const PAUSE_MS = 1800;
 
 function typeLoop() {
   const current = TYPED_STRINGS[typedIndex];
@@ -48,14 +47,14 @@ setTimeout(typeLoop, 1200); // start after hero animation
 
 
 // ── PARTICLE CANVAS BACKGROUND ────────────────────────────────
-const canvas  = document.getElementById('bg-canvas');
-const ctx     = canvas.getContext('2d');
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
 let W, H, particles;
 const PARTICLE_COUNT = 80;
-const CONNECT_DIST   = 140;
+const CONNECT_DIST = 140;
 
 function resize() {
-  W = canvas.width  = window.innerWidth;
+  W = canvas.width = window.innerWidth;
   H = canvas.height = window.innerHeight;
 }
 
@@ -63,12 +62,12 @@ class Particle {
   constructor() { this.reset(true); }
 
   reset(init = false) {
-    this.x   = Math.random() * W;
-    this.y   = init ? Math.random() * H : H + 10;
-    this.vx  = (Math.random() - 0.5) * 0.4;
-    this.vy  = -Math.random() * 0.3 - 0.1;
-    this.r   = Math.random() * 1.5 + 0.5;
-    this.a   = Math.random() * 0.5 + 0.1;
+    this.x = Math.random() * W;
+    this.y = init ? Math.random() * H : H + 10;
+    this.vx = (Math.random() - 0.5) * 0.4;
+    this.vy = -Math.random() * 0.3 - 0.1;
+    this.r = Math.random() * 1.5 + 0.5;
+    this.a = Math.random() * 0.5 + 0.1;
   }
 
   update() {
@@ -93,8 +92,8 @@ function initParticles() {
 function drawConnections() {
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
-      const dx   = particles[i].x - particles[j].x;
-      const dy   = particles[i].y - particles[j].y;
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < CONNECT_DIST) {
         const alpha = (1 - dist / CONNECT_DIST) * 0.12;
@@ -160,7 +159,7 @@ revealEls.forEach(el => revealObs.observe(el));
 
 
 // ── ACTIVE NAV LINK HIGHLIGHTING ─────────────────────────────
-const sections   = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
 const sectionObs = new IntersectionObserver((entries) => {
@@ -237,7 +236,7 @@ hamburger.addEventListener('click', () => {
     // Animate hamburger to X
     const spans = hamburger.querySelectorAll('span');
     spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-    spans[1].style.opacity   = '0';
+    spans[1].style.opacity = '0';
     spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
   } else {
     if (mobileMenu) document.body.removeChild(mobileMenu);
@@ -245,7 +244,7 @@ hamburger.addEventListener('click', () => {
 
     const spans = hamburger.querySelectorAll('span');
     spans[0].style.transform = '';
-    spans[1].style.opacity   = '';
+    spans[1].style.opacity = '';
     spans[2].style.transform = '';
   }
 });
@@ -272,7 +271,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const placeholder = document.getElementById('profile-photo');
     if (placeholder) {
       const frame = placeholder.parentElement;
-      img.alt   = 'Davy Nguyen';
+      img.alt = 'Davy Nguyen';
       img.style.cssText = `
         position:relative; z-index:2; width:100%; height:100%;
         border-radius:50%; object-fit:cover;
@@ -306,7 +305,7 @@ if (window.matchMedia('(pointer:fine)').matches) {
     glowX += (glowTX - glowX) * 0.08;
     glowY += (glowTY - glowY) * 0.08;
     glow.style.left = glowX + 'px';
-    glow.style.top  = glowY + 'px';
+    glow.style.top = glowY + 'px';
     requestAnimationFrame(animGlow);
   })();
 }
